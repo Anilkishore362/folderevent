@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<script src=" C:\Users\DXC\Desktop\copyclip\jquery.min.js"></script>
+<style>	  	
+*{
+		box-sizing:border-box;
+}
+
+table, th, td {
+		
+  			padding: 10px;
+		
+}
+table.center {
+  margin-left:180px; 
+  margin-right: auto;
+}
+.header{
+		background:rgba(0, 0, 0, 0) linear-gradient(to right, rgb(173, 209, 0), rgb(123, 146, 10));
+		text-align:center;
+		padding:30Px;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		color:white;
+	}
+	p{
+			color:#47F0ED;
+			font-family: cursive;
+	}
+	tab1{ 
+			padding-left: 12em;
+		 }
+	
+	.copybutton{
+			background-color:#48B0ED;
+			padding :5px 15px;
+			border:none;
+			color:white;
+			font-size:18px;
+			border-radius:2px;
+			cursor:pointer;
+	}
+	
+	.alert{
+		
+			position: absolute;
+			margin: auto;
+			height:30px;
+			background: linear-gradient(to right, rgb(131, 164, 212), rgb(182, 251, 255));
+			color:white;
+			padding:10px 0;
+			font-size:16px;
+			font-family:cursive;
+			text-align:center;
+			left:0;
+			right:0;
+			bottom:0;
+			display:none;
+		
+	}
+	{
+    font-style: italic;
+    color: gray;
+}	 
+</style>
+</head>
+<body>
+<body>
+<div class="header">
+<h1>Query responded</h1> </div>
+<br>
+<br>
+
+<table class="center" style="width:80%">
+<tr>
+	<td>
+		&ensp;&ensp;&ensp;&ensp;&ensp;
+<p hidden id="text1"> Informed user to clear history and caches in the browser then try or try with
+the different browser and hence closing the call.
+<button class="copybutton" id="copybutton1" title="Informed user to clear history and caches in the browser then try or try with
+the different browser and hence closing the call.">payment error</button>
+	</td>
+	<td>
+<p hidden id="text2">
+Informed user to upload the document in specified format and in limited size.<br>
+Informed user to remove special characters from the file name and then try to upload the document ,hence closing the call.
+</p>
+<button class="copybutton" id="copybutton10" title="Informed user to upload the document in specified format and in limited size.
+Informed user to remove special characters from the file name and then try to upload the document ,hence closing the call.">Upload document</button>
+	</td>
+	<td>
+<p hidden id="text3">
+Informed user to install java 8 update 221(32-bit) and try with Internet Explore 11 version browser ,hence closing the call.
+</p>
+<button class="copybutton" id="copybutton21" title="Informed user to install java 8 update 221(32-bit) and try with Internet Explore 11 version browser ,hence closing the call."</button>
+	</td>
+</tr>
+</table>
+
+<span class="alert">copied!</span>
+
+
+<script>
+function copy(element)
+{
+	 var $temp = $("<textarea>");
+  var brRegex = /<br\s*[\/]?>/gi;
+  $("body").append($temp);
+  $temp.val($(element).html().replace(brRegex, "\r\n")).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $(".alert").fadeIn(600,function(){$(".alert").fadeOut();
+	});
+	var tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+
+
+}
+
+
+$(document).ready(function(){$("#copybutton1").click(function(){copy('#text1'); });});
+
+$(document).ready(function(){$("#copybutton2").click(function(){copy('#text2'); });});
+
+$(document).ready(function(){$("#copybutton3").click(function(){copy('#text3'); });});
+</script>
+
+</body>
+</html>
